@@ -21,17 +21,24 @@ get("/subtract") do
 end
 
 get("/wizard_subtract") do
-  @first_num = params.fetch("first_num").to_f
-  @second_num = params.fetch("second_num").to_f
+  @sub_first_num = params.fetch("sub_first_number").to_f
+  @sub_second_num = params.fetch("sub_second_number").to_f
 
+  @sub_result = @sub_first_num - @sub_second_num
   erb(:sub_result)
 end
 
 get("/multiply") do
-  erb(:multiplication_form)
+  erb(:mult_form)
 end
 
 get("/wizard multiply") do
+
+  @mult_first_num = params.fetch("sub_first_number").to_f
+  @multsecond_num = params.fetch("sub_second_number").to_f
+
+  @mult_result = @sub_first_num - @sub_second_num
+
   erb(:mult_result)
 end
 
